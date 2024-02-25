@@ -7,7 +7,8 @@ from common.lab_utils_multi import run_gradient_descent_feng, zscore_normalize_f
 np.set_printoptions(precision=2)  # reduced display precision on numpy arrays
 
 #
-# 1 Linear regression
+# 1 Linear regression without feature engineering
+# This first example shows the limitations of linear regression without feature engineering
 #
 
 # create target data
@@ -95,7 +96,7 @@ X = zscore_normalize_features(X)
 model_w, model_b = run_gradient_descent_feng(X, y, iterations=1000000, alpha=1e-1)
 
 plt.scatter(x, y, marker='x', c='r', label="Actual Value")
-plt.title("Normalized x x**2, x**3 feature")
+plt.title("Normalized x x**2, x**3 ... x**13 feature")
 plt.plot(x, X @ model_w + model_b, label="Predicted Value")
 plt.xlabel("x")
 plt.ylabel("y")
