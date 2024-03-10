@@ -22,5 +22,3 @@ print(f"model parameters:                   w: {w_norm}, b:{b_norm}")
 # Making predictions
 y_pred = lr_model.predict(X)
 print("Prediction on training set:", y_pred)
-
-lr_model.score()
