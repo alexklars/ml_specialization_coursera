@@ -1,3 +1,4 @@
+# Lab: Gradient descent for logistic regression
 import copy
 import math
 
